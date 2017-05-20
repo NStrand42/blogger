@@ -1,5 +1,5 @@
 <?php
-    class User
+    class Blog
     {
       private $_title;
       private $_entry;
