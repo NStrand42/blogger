@@ -27,7 +27,8 @@
             <div class="row content">
               <div class="col-sm-3 sidenav">
                 
-                <include href="view/includes/sidebar.inc.html" />
+                
+                <?php echo $this->render('view/includes/sidebar.inc.html',NULL,get_defined_vars(),0); ?>
                 
               </div>
           

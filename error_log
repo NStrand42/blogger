@@ -1,0 +1,174 @@
+[19-May-2017 23:11:38 America/Chicago] PHP Fatal error:  Cannot re-assign auto-global variable _SESSION in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 11
+[19-May-2017 23:11:38 America/Chicago] Fatal error: Cannot re-assign auto-global variable _SESSION
+[19-May-2017 23:11:38 America/Chicago] [IT328/blogger/controller/controller.php:11] 
+[19-May-2017 23:12:50 America/Chicago] PHP Fatal error:  Cannot re-assign auto-global variable _SESSION in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 11
+[19-May-2017 23:12:50 America/Chicago] Fatal error: Cannot re-assign auto-global variable _SESSION
+[19-May-2017 23:12:50 America/Chicago] [IT328/blogger/controller/controller.php:11] 
+[19-May-2017 23:15:30 America/Chicago] PHP Fatal error:  Cannot re-assign auto-global variable _SESSION in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 11
+[19-May-2017 23:15:30 America/Chicago] Fatal error: Cannot re-assign auto-global variable _SESSION
+[19-May-2017 23:15:30 America/Chicago] [IT328/blogger/controller/controller.php:11] 
+[19-May-2017 23:15:46 America/Chicago] PHP Fatal error:  Cannot re-assign auto-global variable _SESSION in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 11
+[19-May-2017 23:15:46 America/Chicago] Fatal error: Cannot re-assign auto-global variable _SESSION
+[19-May-2017 23:15:46 America/Chicago] [IT328/blogger/controller/controller.php:11] 
+[19-May-2017 23:16:07 America/Chicago] PHP Fatal error:  Cannot re-assign auto-global variable _SESSION in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 17
+[19-May-2017 23:16:07 America/Chicago] Fatal error: Cannot re-assign auto-global variable _SESSION
+[19-May-2017 23:16:07 America/Chicago] [IT328/blogger/controller/controller.php:17] 
+[19-May-2017 23:16:34 America/Chicago] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 45
+[19-May-2017 23:16:34 America/Chicago] Fatal error: syntax error, unexpected end of file, expecting function (T_FUNCTION)
+[19-May-2017 23:16:34 America/Chicago] [IT328/blogger/controller/controller.php:45] 
+[19-May-2017 23:17:53 America/Chicago] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 45
+[19-May-2017 23:17:53 America/Chicago] Fatal error: syntax error, unexpected end of file, expecting function (T_FUNCTION)
+[19-May-2017 23:17:53 America/Chicago] [IT328/blogger/controller/controller.php:45] 
+[19-May-2017 23:18:08 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:18:08 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:18:08 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:18:08 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:18:08 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:18:08 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:18:08 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:18:08 America/Chicago] [IT328/blogger/index.php:52] Base->run()
+[19-May-2017 23:19:38 America/Chicago] Unable to open /view/home.html
+[19-May-2017 23:19:38 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:19:38 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:19:38 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:19:38 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:19:38 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:19:38 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:19:38 America/Chicago] [IT328/blogger/index.php:52] Base->run()
+[19-May-2017 23:19:46 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:19:46 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:19:46 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:19:46 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:19:46 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:19:46 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:19:46 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:19:46 America/Chicago] [IT328/blogger/index.php:52] Base->run()
+[19-May-2017 23:20:22 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:20:22 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:20:22 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:20:22 America/Chicago] [IT328/blogger/index.php:19] Preview->render()
+[19-May-2017 23:20:22 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:20:22 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:20:22 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:21:25 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:21:25 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:21:25 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:21:25 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:21:25 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:21:25 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:21:25 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:21:25 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:21:52 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:21:52 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:21:52 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:21:52 America/Chicago] [IT328/blogger/index.php:18] Preview->render()
+[19-May-2017 23:21:52 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:21:52 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:21:52 America/Chicago] [IT328/blogger/index.php:52] Base->run()
+[19-May-2017 23:23:03 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:23:03 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:23:03 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:23:03 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:23:03 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:23:03 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:23:03 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:23:03 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:23:18 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:23:18 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:23:18 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:23:18 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:23:18 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:23:18 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:23:18 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:23:18 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:23:38 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:23:38 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:23:38 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:23:38 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:23:38 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:23:38 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:23:38 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:23:38 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:23:51 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:23:51 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:23:51 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:23:51 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:23:51 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:23:51 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:23:51 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:23:51 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:23:53 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:23:53 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:23:53 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:23:53 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:23:53 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:23:53 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:23:53 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:23:53 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:24:10 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:24:10 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:24:10 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:24:10 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:24:10 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:24:10 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:24:10 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:24:10 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:24:23 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:24:23 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:24:23 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:24:23 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:24:23 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:24:23 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:24:23 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:24:23 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:24:37 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:24:37 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:24:37 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:24:37 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:24:37 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:24:37 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:24:37 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:24:37 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:24:38 America/Chicago] Unable to open view/home.html
+[19-May-2017 23:24:38 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:24:38 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:24:38 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:24:38 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:24:38 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:24:38 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:24:38 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:26:23 America/Chicago] HTTP 404 (GET /bandmember.jpg)
+[19-May-2017 23:26:23 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1645] Base->error()
+[19-May-2017 23:26:23 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:26:23 America/Chicago] HTTP 404 (GET /bird.jpg)
+[19-May-2017 23:26:23 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1645] Base->error()
+[19-May-2017 23:26:23 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:27:25 America/Chicago] HTTP 404 (GET /bandmember.jpg)
+[19-May-2017 23:27:25 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1645] Base->error()
+[19-May-2017 23:27:25 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:27:25 America/Chicago] HTTP 404 (GET /bird.jpg)
+[19-May-2017 23:27:25 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1645] Base->error()
+[19-May-2017 23:27:25 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:38:01 America/Chicago] Unable to open view/includes/sidebar.html
+[19-May-2017 23:38:01 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[19-May-2017 23:38:01 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[19-May-2017 23:38:01 America/Chicago] [IT328/blogger/tmp/8dt5tk8ejva1.2wk7nptc4944g.php:31] Preview->render()
+[19-May-2017 23:38:01 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2708] require('/home/nstrand/public_html/IT328/blogger/tmp/8dt5tk8ejva1.2wk7nptc4944g.php')
+[19-May-2017 23:38:01 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2925] View->sandbox()
+[19-May-2017 23:38:01 America/Chicago] [IT328/blogger/controller/controller.php:14] Preview->render()
+[19-May-2017 23:38:01 America/Chicago] [IT328/blogger/index.php:18] Controller->renderHome()
+[19-May-2017 23:38:01 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[19-May-2017 23:38:01 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[19-May-2017 23:38:01 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:38:52 America/Chicago] HTTP 404 (GET /bandmember.jpg)
+[19-May-2017 23:38:52 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1645] Base->error()
+[19-May-2017 23:38:52 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:38:52 America/Chicago] HTTP 404 (GET /bird.jpg)
+[19-May-2017 23:38:52 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1645] Base->error()
+[19-May-2017 23:38:52 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:39:01 America/Chicago] HTTP 404 (GET /bandmember.jpg)
+[19-May-2017 23:39:01 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1645] Base->error()
+[19-May-2017 23:39:01 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[19-May-2017 23:39:01 America/Chicago] HTTP 404 (GET /bird.jpg)
+[19-May-2017 23:39:01 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1645] Base->error()
+[19-May-2017 23:39:01 America/Chicago] [IT328/blogger/index.php:53] Base->run()

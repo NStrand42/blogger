@@ -5,7 +5,7 @@
       private $_email;
       private $_bio;
       private $_portrait;
-      private $_blogs[];
+      private $_blogs;
       
       function __construct($username="unknown", $email="unknown", $bio="unknown",
                            $portrait="unknown")
@@ -20,22 +20,22 @@
       
       function getUsername()
       {
-          return $_username;
+          return $this->_username;
       }
       
       function getBio()
       {
-          return $_bio;
+          return $this->_bio;
       }
       
       function getPortrait()
       {
-          return $_portrait;
+          return $this->_portrait;
       }
       
       function getAllBlogs()
       {
-          return $_blogs;
+          return $this->_blogs;
       }
       
       function addBlog($title, $entry)
