@@ -25,14 +25,13 @@
     <body>
         <div class="container-fluid">
             <div class="row content">
-              <div class="col-sm-3 sidenav">
-                
+              <div class="col-sm-2 sidenav">
                 
                 <?php echo $this->render('view/includes/sidebar.inc.html',NULL,get_defined_vars(),0); ?>
                 
               </div>
           
-              <div class="col-sm-9">
+              <div class="col-sm-10">
                 <h4><small>RECENT POSTS</small></h4>
                 <hr>
                 <h2>I Love Food</h2>
