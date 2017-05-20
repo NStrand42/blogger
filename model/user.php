@@ -38,9 +38,9 @@
           return $_blogs;
       }
       
-      function addBlog($blog)
+      function addBlog($title, $entry)
       {
-        $this->_blogs[] = new Blog($blog);
+        $this->_blogs[] = new Blog($title, $entry);
       }
       
     }
