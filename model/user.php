@@ -42,3 +42,4 @@
         {
           $this->blogs[] = new Blog($blog);
         }
+    }
