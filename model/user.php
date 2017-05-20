@@ -1,46 +1,46 @@
 <?php
     class User
     {
-      private $username;
-      private $email;
-      private $bio;
-      private $portrait;
-      private $blogs[];
+      private $_username;
+      private $_email;
+      private $_bio;
+      private $_portrait;
+      private $_blogs[];
       
       function __construct($username="unknown", $email="unknown", $bio="unknown",
                            $portrait="unknown")
       {
-          $this->username = $username;
-          $this->email = $email;
-          $this->bio = $bio;
-          $this->portrait = $portrait;
-          $this->blogs = array();
+          $this->_username = $username;
+          $this->_email = $email;
+          $this->_bio = $bio;
+          $this->_portrait = $portrait;
+          $this->_blogs = array();
           
       }
       
       function getUsername()
       {
-          return $username;
+          return $_username;
       }
       
       function getBio()
       {
-          return $bio;
+          return $_bio;
       }
       
       function getPortrait()
       {
-          return $portrait;
+          return $_portrait;
       }
       
       function getAllBlogs()
       {
-          return $blogs;
+          return $_blogs;
       }
       
       function addBlog($blog)
       {
-        $this->blogs[] = new Blog($blog);
+        $this->_blogs[] = new Blog($blog);
       }
       
     }
