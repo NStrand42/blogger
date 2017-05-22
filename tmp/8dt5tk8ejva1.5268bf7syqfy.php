@@ -56,7 +56,7 @@
                           <div class="panel-heading">
                           <?php foreach (($topBlog?:[]) as $title=>$entry): ?>
                             <li><a href="./blog/<?= $title ?>"> <?= $title ?></a></li>
-                            <p><?= $entry ?></p>
+                            <pre><?= $entry ?></pre>
                           <?php endforeach; ?>
                           </div>
                       </div>
@@ -70,10 +70,17 @@
                             <h2>My blogs:</h2>
                             <hr>
                             <?php foreach (($blogs?:[]) as $title=>$entry): ?>
-                              <li><a href="./blog/<?= $title ?>"> <?= $title ?></a></li>
-                              <p><?= $entry ?></p>
+                              <li><a href="./blog/<?= $title ?>"> <?= $title ?> - word count <?= $wordCount ?> -</a></li>
+                              <pre><?= $entry ?></pre>
                               <hr>
                             <?php endforeach; ?>
+                            
+                            <?php foreach (($test?:[]) as $titles): ?>
+                              <pre><?= $titles[primary] ?></pre>
+                              <pre><?= @$titles[secondary] ?></pre>
+                              <hr>
+                            <?php endforeach; ?>
+                            
                           </div>
                       </div>
                     </div>
@@ -101,7 +108,7 @@
                     <div class="col-sm-12">
                       <div class="panel panel-default">
                         <div class="panel-heading">
-                          <p>Bio: <?= $bio ?></p>
+                          <pre>Bio: <?= $bio ?></pre>
                         </div>
                       </div>
                     </div>

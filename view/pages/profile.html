@@ -56,7 +56,7 @@
                           <div class="panel-heading">
                           <repeat group="{{ @topBlog }}" key="{{ @title }} " value="{{ @entry }}">
                             <li><a href="./blog/{{ @title }}"> {{ @title }}</a></li>
-                            <p>{{ @entry }}</p>
+                            <pre>{{ @entry }}</pre>
                           </repeat>
                           </div>
                       </div>
@@ -70,10 +70,17 @@
                             <h2>My blogs:</h2>
                             <hr>
                             <repeat group="{{ @blogs }}" key="{{ @title }} " value="{{ @entry }}">
-                              <li><a href="./blog/{{ @title }}"> {{ @title }}</a></li>
-                              <p>{{ @entry }}</p>
+                              <li><a href="./blog/{{ @title }}"> {{ @title }} - word count {{ @wordCount }} -</a></li>
+                              <pre>{{ @entry }}</pre>
                               <hr>
                             </repeat>
+                            
+                            <repeat group="{{ @test }}" value="{{ @titles }}">
+                              <pre>{{ @titles[primary] }}</pre>
+                              <pre>{{ @@titles[secondary] }}</pre>
+                              <hr>
+                            </repeat>
+                            
                           </div>
                       </div>
                     </div>
@@ -101,7 +108,7 @@
                     <div class="col-sm-12">
                       <div class="panel panel-default">
                         <div class="panel-heading">
-                          <p>Bio: {{ @bio }}</p>
+                          <pre>Bio: {{ @bio }}</pre>
                         </div>
                       </div>
                     </div>

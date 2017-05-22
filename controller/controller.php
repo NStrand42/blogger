@@ -44,10 +44,23 @@
           echo Template::instance()->render('view/pages/your-blogs.html');
         }
         
-        function renderProfile($f3)
+        function renderProfile($f3, $params)
         {
           
-          $f3->set('user', "Joe Schmoe");
+          $testArray1 = array('primary' => 'Title',
+                                    'secondary' => 'Entry');
+          
+          $testArray2 = array('primary' => '2',
+                                    'secondary' => '2');
+          
+          $testArray3 = array('primary' => '3',
+                                    'secondary' => '3');
+          
+          $testArray = array($testArray1, $testArray2, $testArray3);
+          
+          $f3->set('test', $testArray);
+          
+          $f3->set('user', $params['user']);
           $f3->set('topBlog', array('RecentTitle' => 'Recent Entry'));
           $f3->set('blogs', array('Title' => 'Entry',
                                     'Title2' => 'Entry',
