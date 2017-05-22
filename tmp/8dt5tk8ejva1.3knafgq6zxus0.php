@@ -19,17 +19,17 @@
         <?php if ($user): ?>
             <!-- logged in now show these --> 
           
-            <li><a href="scholarships-admin.php">MyBlogs ></a></li>
-            <li><a href="opp-admin.php">Create Blog ></a></li>
-            <li><a href="admin_logout.php">About Us ></a></li>
-            <li><a href="admin_logout.php">Logout ></a></li>
+            <li><a href="./your-blogs">MyBlogs ></a></li>
+            <li><a href="./create-blog">Create Blog ></a></li>
+            <li><a href="./about-us">About Us ></a></li>
+            <li><a href="./admin_logout.php">Logout ></a></li>
           
           
           <!-- if not logged in show these--> 
           <?php else: ?>
-            <li><a href="scholarships-admin.php">Become A Blogger ></a></li>
-            <li><a href="opp-admin.php">About Us ></a></li>
-            <li><a href="admin_logout.php">Login ></a></li>
+            <li><a href="./become-a-blogger">Become A Blogger ></a></li>
+            <li><a href="./about-us">About Us ></a></li>
+            <li><a href="./login">Login ></a></li>
           
          <?php endif; ?>
         </ul>

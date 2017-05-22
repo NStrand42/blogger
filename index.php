@@ -49,6 +49,13 @@
         
     });
     
+    $f3->route('GET|POST /your-blog', function($f3) {
+        
+      $control = new Controller();
+      $control->renderYourBlogs($f3);
+        
+    });
+    
     //Run fat free
     $f3->run();
     

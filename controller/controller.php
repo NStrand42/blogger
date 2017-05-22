@@ -38,6 +38,11 @@
           echo Template::instance()->render('view/pages/create-blogger.html');
         }
         
+        function renderYourBlogs($f3)
+        {
+          
+          echo Template::instance()->render('view/pages/your-blogs.html');
+        }
         
     }  
         
