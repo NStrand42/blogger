@@ -372,3 +372,6 @@
 [22-May-2017 00:35:32 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
 [22-May-2017 00:35:32 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
 [22-May-2017 00:35:32 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[22-May-2017 01:46:35 America/Chicago] HTTP 404 (GET /scholarships-admin.php)
+[22-May-2017 01:46:35 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1645] Base->error()
+[22-May-2017 01:46:35 America/Chicago] [IT328/blogger/index.php:53] Base->run()

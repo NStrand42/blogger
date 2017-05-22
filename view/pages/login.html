@@ -15,6 +15,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
          
+         <!-- personal style sheet -->
+         <link rel="stylesheet" type="text/css" href="styles/main-style.css">
+         
         <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -51,8 +54,8 @@
                           <div class="row">
                             <div class="col-sm-6 col-sm-offset-3 login-entry">
                             <form class="form-signin">
-                              <label for="inputEmail" class="sr-only">Email address</label>
-                              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                              <label for="inputUsername" class="sr-only">Username</label>
+                              <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
                               <label for="inputPassword" class="sr-only">Password</label>
                               <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                               <button class="btn btn-lg btn-success btn-block login-button" type="submit">Log in</button>
