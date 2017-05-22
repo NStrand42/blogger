@@ -54,9 +54,9 @@
                     <div class="col-sm-12">
                       <div class="panel panel-default">
                           <div class="panel-heading">
-                          <?php foreach (($topBlog?:[]) as $title=>$entry): ?>
-                            <li><a href="./blog/<?= $title ?>"> <?= $title ?></a></li>
-                            <pre><?= $entry ?></pre>
+                          <?php foreach (($topBlog?:[]) as $topBlog): ?>
+                            <a href="./blog/<?= $topBlog[title] ?>"> <?= $topBlog[title] ?></a>
+                            <pre><?= $topBlog[entry] ?></pre>
                           <?php endforeach; ?>
                           </div>
                       </div>
@@ -69,19 +69,11 @@
                           <div class="panel-heading">
                             <h2>My blogs:</h2>
                             <hr>
-                            <?php foreach (($blogs?:[]) as $title=>$entry): ?>
-                              <li><a href="./blog/<?= $title ?>"> <?= $title ?> - word count <?= $wordCount ?> -</a></li>
-                              <pre><?= $entry ?></pre>
+                            <?php foreach (($blogs?:[]) as $blog): ?>
+                              <a href="./blog/<?= $blog[title] ?>"> <?= $blog[title] ?> - word count <?= $blog[wordCount] ?> - <?= $blog[date] ?></a>
+                              <pre><?= $blog[entry] ?></pre>
                               <hr>
                             <?php endforeach; ?>
-                            
-                            <?php foreach (($test?:[]) as $title): ?>
-                              <pre><?= $title[primary] ?></pre>
-                              <pre><?= @$title[secondary] ?></pre>
-                              <pre><?= @$title[wordCount] ?></pre>
-                              <hr>
-                            <?php endforeach; ?>
-                            
                           </div>
                       </div>
                     </div>

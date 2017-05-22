@@ -54,34 +54,25 @@
                     <div class="col-sm-12">
                       <div class="panel panel-default">
                           <div class="panel-heading">
-                          <repeat group="{{ @topBlog }}" key="{{ @title }} " value="{{ @entry }}">
-                            <li><a href="./blog/{{ @title }}"> {{ @title }}</a></li>
-                            <pre>{{ @entry }}</pre>
+                          <repeat group="{{ @topBlog }}" value="{{ @topBlog }}">
+                            <a href="./blog/{{  @topBlog[title] }}"> {{ @topBlog[title] }}</a>
+                            <pre>{{ @topBlog[entry] }}</pre>
                           </repeat>
                           </div>
                       </div>
                     </div>
                   
-                 
-                 
+
                     <div class="col-sm-12">
                       <div class="panel panel-default">
                           <div class="panel-heading">
                             <h2>My blogs:</h2>
                             <hr>
-                            <repeat group="{{ @blogs }}" key="{{ @title }} " value="{{ @entry }}">
-                              <li><a href="./blog/{{ @title }}"> {{ @title }} - word count {{ @wordCount }} -</a></li>
-                              <pre>{{ @entry }}</pre>
+                            <repeat group="{{ @blogs }}" value="{{ @blog }}">
+                              <a href="./blog/{{ @blog[title] }}"> {{ @blog[title] }} - word count {{ @blog[wordCount] }} - {{ @blog[date] }}</a>
+                              <pre>{{ @blog[entry] }}</pre>
                               <hr>
                             </repeat>
-                            
-                            <repeat group="{{ @test }}" value="{{ @title }}">
-                              <pre>{{ @title[primary] }}</pre>
-                              <pre>{{ @@title[secondary] }}</pre>
-                              <pre>{{ @@title[wordCount] }}</pre>
-                              <hr>
-                            </repeat>
-                            
                           </div>
                       </div>
                     </div>

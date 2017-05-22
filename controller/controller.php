@@ -47,10 +47,12 @@
         function renderProfile($f3, $params)
         {
           
-          $testArray1 = array('primary' => 'Title',
-                                    'secondary' => 'Entry');
+          $testArray1 = array('title' => 'This is the Top Blogs Title',
+                              'entry' => 'Entry',
+                              'wordCount' => '1',
+                              'date' => "05/22/2017");
           
-          $testArray1[secondary] = "" . "This is a long Entry. This is a long Entry.This is a long Entry. This is a long Entry. This is a long Entry.This is a long Entry.
+          $testArray1[entry] = "" . "This is a long Entry. This is a long Entry.This is a long Entry. This is a long Entry. This is a long Entry.This is a long Entry.
 
 This is a long Entry. This is a long Entry.This is a long Entry.This is a long Entry. This is a long Entry.This is a long Entry.
 
@@ -59,32 +61,27 @@ This is a long Entry. This is a long Entry.This is a long Entry.This is a long E
 This is a long Entry. This is a long Entry.This is a long Entry.This is a long Entry. This is a long Entry.This is a long Entry.
 ";
           
-
+ 
+          $testArray2 = array('title' => 'Title2',
+                              'entry' => $testArray1[entry],
+                              'wordCount' => '2',
+                              'date' => "05/22/2017");
           
+          $testArray3 = array('title' => 'Title3',
+                              'entry' => $testArray1[entry],
+                              'wordCount' => '3',
+                              'date' => "05/22/2017");
           
-          
-          
-          $testArray2 = array('primary' => 'Title2',
-                                    'secondary' => 'Entry2');
-          
-          $testArray3 = array('primary' => 'Title3',
-                              'secondary' => 'Entry3',
-                              'wordCount' => '4');
-          
-          
+          $firstBlog[] = $testArray1;
           
           $testArray = array($testArray1, $testArray2, $testArray3);
           
-          $f3->set('test', $testArray);
-          
+          $f3->set('topBlog', $firstBlog);
           $f3->set('user', $params['user']);
-          $f3->set('topBlog', array('RecentTitle' => 'Recent Entry'));
-          $f3->set('blogs', array('Title' => 'Entry',
-                                    'Title2' => 'Entry',
-                                    'Title3' => 'Entry'));
+          $f3->set('blogs',  $testArray);
           
           
-          $f3->set('bio', $testArray1[secondary]);
+          $f3->set('bio', $testArray1[entry]);
           
  
           
