@@ -75,9 +75,10 @@
                               <hr>
                             <?php endforeach; ?>
                             
-                            <?php foreach (($test?:[]) as $titles): ?>
-                              <pre><?= $titles[primary] ?></pre>
-                              <pre><?= @$titles[secondary] ?></pre>
+                            <?php foreach (($test?:[]) as $title): ?>
+                              <pre><?= $title[primary] ?></pre>
+                              <pre><?= @$title[secondary] ?></pre>
+                              <pre><?= @$title[wordCount] ?></pre>
                               <hr>
                             <?php endforeach; ?>
                             

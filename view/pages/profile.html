@@ -75,9 +75,10 @@
                               <hr>
                             </repeat>
                             
-                            <repeat group="{{ @test }}" value="{{ @titles }}">
-                              <pre>{{ @titles[primary] }}</pre>
-                              <pre>{{ @@titles[secondary] }}</pre>
+                            <repeat group="{{ @test }}" value="{{ @title }}">
+                              <pre>{{ @title[primary] }}</pre>
+                              <pre>{{ @@title[secondary] }}</pre>
+                              <pre>{{ @@title[wordCount] }}</pre>
                               <hr>
                             </repeat>
                             

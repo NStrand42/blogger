@@ -50,11 +50,14 @@
           $testArray1 = array('primary' => 'Title',
                                     'secondary' => 'Entry');
           
-          $testArray2 = array('primary' => '2',
-                                    'secondary' => '2');
+          $testArray2 = array('primary' => 'Title2',
+                                    'secondary' => 'Entry2');
           
-          $testArray3 = array('primary' => '3',
-                                    'secondary' => '3');
+          $testArray3 = array('primary' => 'Title3',
+                              'secondary' => 'Entry3',
+                              'wordCount' => '4');
+          
+          
           
           $testArray = array($testArray1, $testArray2, $testArray3);
           
