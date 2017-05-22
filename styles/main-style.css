@@ -54,16 +54,17 @@
   margin: auto;
 }
 
-.login-button {
-  margin-top: 20px;
+
+.form-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .quick-bio {
   padding: 0px;
 }
 
-input {
-  margin: 5px;
-  border: 5px;
-  border-color: rgb(128,128,128);
+.Title-on-blog {
+  border: 
 }
+

@@ -92,11 +92,7 @@
                                         <label for="inputUsername" class="sr-only">Username</label>
                                         <input type="email" id="inputEmail" class="form-control" placeholder="Upload Portait Here" required autofocus>
                                     </div>
-                                         <div class="panel panel-default">
-                                            <div class="panel-heading text-center quick-bio">
-                                                <h5><strong>Quick Biography</strong></h5>
-                                            </div>
-                                        </div>
+                                         <span class="input-group-addon">Quick Biogrpahy</span>
                                      
                                      <div class="form-group">   
                                         <label for="inputPassword" class="sr-only">Password</label>
