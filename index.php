@@ -56,6 +56,13 @@
         
     });
     
+    $f3->route('GET|POST /profile/@user', function($f3, $params) {
+        
+      $control = new Controller();
+      $control->renderprofile($f3, $params);
+        
+    });
+    
     //Run fat free
     $f3->run();
     

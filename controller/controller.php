@@ -44,6 +44,21 @@
           echo Template::instance()->render('view/pages/your-blogs.html');
         }
         
+        function renderProfile($f3)
+        {
+          
+          $f3->set('user', "Joe Schmoe");
+          $f3->set('topBlog', array('RecentTitle' => 'Recent Entry'));
+          $f3->set('blogs', array('Title' => 'Entry',
+                                    'Title2' => 'Entry',
+                                    'Title3' => 'Entry'));
+          $f3->set('bio', "Joe Schmoes Bio is right here");
+          
+ 
+          
+          echo Template::instance()->render('view/pages/profile.html');
+        }
+        
     }  
         
         
