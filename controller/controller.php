@@ -17,25 +17,25 @@
         function renderAboutUs($f3)
         {
           
-          echo Template::instance()->render('view/about-us.html');
+          echo Template::instance()->render('view/pages/about-us.html');
         }
         
         function renderLogin($f3)
         {
           
-          echo Template::instance()->render('view/login.html');
+          echo Template::instance()->render('view/pages/login.html');
         }
         
         function renderCreateBlog($f3)
         {
           
-          echo Template::instance()->render('view/create-blog.html');
+          echo Template::instance()->render('view/pages/create-blog.html');
         }
         
         function renderBecomeABlogger($f3)
         {
           
-          echo Template::instance()->render('view/create-blogger.html');
+          echo Template::instance()->render('view/pages/create-blogger.html');
         }
         
         

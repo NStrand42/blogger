@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="utf-8">
-        <title>About Us</title>
+        <title>Log In Blog</title>
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,43 +34,34 @@
               <div class="col-sm-10">
                 
                  <div class="row">
-                    <div class="col-sm-12">
+                  <div class="col-sm-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                        <h1>The Blog Site</h1>
-                        <h3>Your one-stop shop for internet blogs</h3>
+                        <h1>Welcome Back!</h1>
+                        <h3>Please Log in Below</h3>
                         </div>
                     </div>
-                    </div>
+                  </div>
                  </div>
                  
                  <div class="row">
-                    <div class="col-sm-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                            <h3>The Internet is abuzz with our blog content.</h3>
-                            <hr>
-                            <p>
-                                Lorem ipsum dolor sit amet, conectetur adipiscing elit. Nun ut porta dui. Name maximus et maruris eu tempor.
-                                Nulla rhoncus lorem phareta molestie bladit. Sed pellentesque lacus quis aiquam maximus. Integer sodales egets
-                                purus vitae condimentm. Phasellus neque neque. rutrum ut mattis ut, tincidunt eget ante. Vivamus faucibus argue
-                                in euismof ultrices.
-                            </p>
-                            <hr>
-                            
-                            <h3>Hear what others are saying about us!</h3>
-                            <br />
-                            <p>
-                                "Lorem ipsum dolor sit amet, conectetur adipiscing elit. Nun ut porta dui. Name maximus et maruris eu tempor."
-                                -long time user Sally Bguyn
-                            </p>
-                            <br />
-                            <p>
-                                "Lorem ipsum dolor sit amet, conectetur..." blog contributor Terry Stone
-                            </p>
+                  <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3 login-entry">
+                            <form class="form-signin">
+                              <label for="inputEmail" class="sr-only">Email address</label>
+                              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                              <label for="inputPassword" class="sr-only">Password</label>
+                              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                              <button class="btn btn-lg btn-success btn-block login-button" type="submit">Log in</button>
+                            </form>
                             </div>
+                          </div>
                         </div>
                     </div>
+                  </div>
                  </div>
                  
                 

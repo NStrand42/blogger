@@ -364,3 +364,11 @@
 [22-May-2017 00:11:20 America/Chicago] HTTP 404 (GET /bandmember.jpg)
 [22-May-2017 00:11:20 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1645] Base->error()
 [22-May-2017 00:11:20 America/Chicago] [IT328/blogger/index.php:53] Base->run()
+[22-May-2017 00:35:32 America/Chicago] Unable to open view/about-us.html
+[22-May-2017 00:35:32 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2178] Base->error()
+[22-May-2017 00:35:32 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:2934] user_error()
+[22-May-2017 00:35:32 America/Chicago] [IT328/blogger/controller/controller.php:20] Preview->render()
+[22-May-2017 00:35:32 America/Chicago] [IT328/blogger/index.php:34] Controller->renderAboutUs()
+[22-May-2017 00:35:32 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
+[22-May-2017 00:35:32 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
+[22-May-2017 00:35:32 America/Chicago] [IT328/blogger/index.php:53] Base->run()
