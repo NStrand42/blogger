@@ -50,6 +50,20 @@
           $testArray1 = array('primary' => 'Title',
                                     'secondary' => 'Entry');
           
+          $testArray1[secondary] = "" . "This is a long Entry. This is a long Entry.This is a long Entry. This is a long Entry. This is a long Entry.This is a long Entry.
+
+This is a long Entry. This is a long Entry.This is a long Entry.This is a long Entry. This is a long Entry.This is a long Entry.
+
+This is a long Entry. This is a long Entry.This is a long Entry.This is a long Entry. This is a long Entry.This is a long Entry.
+
+This is a long Entry. This is a long Entry.This is a long Entry.This is a long Entry. This is a long Entry.This is a long Entry.
+";
+          
+
+          
+          
+          
+          
           $testArray2 = array('primary' => 'Title2',
                                     'secondary' => 'Entry2');
           
@@ -68,7 +82,9 @@
           $f3->set('blogs', array('Title' => 'Entry',
                                     'Title2' => 'Entry',
                                     'Title3' => 'Entry'));
-          $f3->set('bio', "Joe Schmoes Bio is right here");
+          
+          
+          $f3->set('bio', $testArray1[secondary]);
           
  
           
