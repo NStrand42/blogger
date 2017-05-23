@@ -82,6 +82,16 @@
         
     });
     
+    $f3->route('GET|POST /logout', function($f3) {
+        
+      session_unset();
+      session_destroy();
+      session_start();
+      $control = new Controller();
+      $control->renderHome($f3);
+        
+    });
+    
     //Run fat free
     $f3->run();
     

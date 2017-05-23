@@ -22,7 +22,7 @@
             <li><a href="http://nstrand.greenrivertech.net/IT328/blogger/your-blog">MyBlogs ></a></li>
             <li><a href="http://nstrand.greenrivertech.net/IT328/blogger/create-blog">Create Blog ></a></li>
             <li><a href="http://nstrand.greenrivertech.net/IT328/blogger/about-us">About Us ></a></li>
-            <li><a href="http://nstrand.greenrivertech.net/IT328/blogger/admin_logout.php">Logout ></a></li>
+            <li><a href="http://nstrand.greenrivertech.net/IT328/blogger/logout">Logout ></a></li>
           
           
           <!-- if not logged in show these--> 
