@@ -76,9 +76,8 @@
     
     $f3->route('GET|POST /profile/@user/@title', function($f3, $params) {
         
-      $captureUserandTitle[] = array($params['user'] => $params['title']);
       $control = new Controller();
-      $control->renderBlog($f3, $captureUserandTitle);
+      $control->renderBlog($f3, $params);
         
     });
     

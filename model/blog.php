@@ -91,9 +91,22 @@
         return $blogCount;
       }
       
-      function getEntry()
+      function getBlog($username)
       {
-          return $_bio;
+        $select = 'SELECT id, title, entry FROM `Blog` Where user = :username';
+        $statement = $this->_pdo->prepare($select);
+        $statement->bindValue(':username', $username, PDO::PARAM_STR);
+        $statement->execute();
+        
+        $results = array();
+        
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+             
+             $results[] = $row;
+             
+        }
+        
+        return $results;
       }
       
       function getDate()

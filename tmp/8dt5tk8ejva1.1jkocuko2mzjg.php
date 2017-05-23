@@ -16,7 +16,7 @@
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
          
          <!-- personal style sheet -->
-         <link rel="stylesheet" type="text/css" href="styles/main-style.css">
+         <link rel="stylesheet" type="text/css" href="../../styles/main-style.css">
          
         <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -39,10 +39,10 @@
                  <div class="row">
                     <div class="col-sm-12">
                     <div class="panel panel-default">
-                        <div class="panel-heading">
+                        <div class="panel-heading blog">
                         <h1><?= $title ?></h1>
-                        <img id="portrait" class="" src="http://pets.vethospitals.ufl.edu/files/2012/04/Ocala_main.jpg" alt="" width="100%">
-                        <pre><?= $entry ?></pre>
+                        <img id="portrait" class="blogPortrait" src="<?= $portrait ?>" alt="" width="100%">
+                        <p><?= $entry ?></p>
                         </div>
                     </div>
                     </div>

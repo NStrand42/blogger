@@ -140,43 +140,23 @@
         function renderBlog($f3, $params)
         {
             $this->checkLoggedIn($f3);
+            
             //Get the array from the database that has has Blogs and entries associated to user title, entry
-            foreach ($params as $x => $x_value) {
-              
-              $title = $x_value;
+            $sess = new Blog;
+            $blog = $sess->getBlog($params['user']);
             
-              $f3->set('title', $x_value);
-              $f3->set('user', $x);
+             foreach ($blog as $key => $value) {
+
+                    $f3->set('title', $value['title']);
+                    $f3->set('entry', $value['entry']);
+                
             }
             
+            $sess = new User;
+            $f3->set('portrait', $sess->getPortrait($params['user']));
             
             
-            //These test arrays assume database pull only pulled where user meets $params['user']
-            $testArray2 = array('title' => 'Title2',
-                                
-                              'entry' => "This is just an entry",
-                              'wordCount' => '2',
-                              'date' => "05/22/2017");
-          
-          $testArray3 = array('title' => 'Title3',
-                              'entry' => "This is just an entry",
-                              'wordCount' => '3',
-                              'date' => "05/22/2017");
-          
-          $arr[] = array($testArray2, $testArray3);
             
-            
-            //Assign variables to use in template
-            foreach ($arr as $key => $value) {
-                
-                echo $key;
-                echo $value;
-                
-                if($key[title] === $title) {
-                    $f3->set('title', $value[title]);
-                    $f3->set('entry', $value[entry]);
-                }
-            }
             
             echo Template::instance()->render('view/pages/blog.html');
         }

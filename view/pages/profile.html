@@ -54,7 +54,7 @@
                     <div class="col-sm-12">
                       <div class="panel panel-default">
                           <div class="panel-heading">
-                            <a href="./blog/{{  @topBlog[title] }}"> {{ @topBlog[title] }}</a>
+                            <a href="./{{ @user }}/{{  @topBlog[title] }}"> {{ @topBlog[title] }}</a>
                             <pre>{{ @topBlog[entry] }}</pre>
                           </div>
                       </div>
@@ -67,7 +67,7 @@
                             <h2>My blogs:</h2>
                             <hr>
                             <repeat group="{{ @blogs }}" value="{{ @blog }}">
-                              <a href="./blog/{{ @blog[title] }}"> {{ @blog[title] }} - word count {{ @blog[wordCount] }} - {{ @blog[date] }}</a>
+                              <a href="./{{ @user }}/{{ @blog[title] }}"> {{ @blog[title] }} - word count {{ @blog[wordCount] }} - {{ @blog[date] }}</a>
                               <pre>{{ @blog[entry] }}</pre>
                               <hr>
                             </repeat>
