@@ -75,3 +75,18 @@ pre {
  white-space: -o-pre-wrap;    /* Opera 7 */
  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
+.homeImage {
+  height: 15vh;
+}
+
+.topEntryBlogHome {
+  height: 15vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.LinkSpacingHome {
+  display: flex;
+  justify-content: space-between;
+}

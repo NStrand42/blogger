@@ -59,7 +59,15 @@
     $f3->route('GET|POST /profile/@user', function($f3, $params) {
         
       $control = new Controller();
-      $control->renderprofile($f3, $params);
+      $control->renderProfile($f3, $params);
+        
+    });
+    
+    $f3->route('GET|POST /profile/@user/@title', function($f3, $params) {
+        
+      $captureUserandTitle[] = array($params['user'] => $params['title']);
+      $control = new Controller();
+      $control->renderBlog($f3, $captureUserandTitle);
         
     });
     

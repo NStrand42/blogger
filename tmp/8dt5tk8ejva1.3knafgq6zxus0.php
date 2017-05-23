@@ -14,7 +14,7 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
         <img id="trumpet"src="http://nstrand.greenrivertech.net/IT328/blogger/images/trumpet.png" alt="../images/trumpet.png" style="width:10vw;">
-        <li><a href="/">Home ></a></li>
+        <li><a href="http://nstrand.greenrivertech.net/IT328/blogger">Home ></a></li>
     
         <?php if ($user): ?>
             <!-- logged in now show these --> 
