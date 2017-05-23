@@ -54,10 +54,8 @@
                     <div class="col-sm-12">
                       <div class="panel panel-default">
                           <div class="panel-heading">
-                          <?php foreach (($topBlog?:[]) as $topBlog): ?>
                             <a href="./blog/<?= $topBlog[title] ?>"> <?= $topBlog[title] ?></a>
                             <pre><?= $topBlog[entry] ?></pre>
-                          <?php endforeach; ?>
                           </div>
                       </div>
                     </div>

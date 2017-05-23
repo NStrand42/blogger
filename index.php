@@ -60,7 +60,15 @@
     });
     
     $f3->route('GET|POST /profile/@user', function($f3, $params) {
-        
+      
+      if (isset($_POST['title']) && isset($_POST['entry'])){
+        $title = $_POST['title'];
+        $entry = $_POST['entry'];
+        $control = new Controller();
+        $control->addPost($title, $entry, $params['user']);
+      }
+      
+      
       $control = new Controller();
       $control->renderProfile($f3, $params);
         

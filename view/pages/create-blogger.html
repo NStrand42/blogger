@@ -108,7 +108,7 @@
                                 
                             <div class="row">
                                  <div class="col-sm-6 col-sm-offset-3 login-entry">
-                                    <button class="btn btn-lg btn-success btn-block login-button" type="submit">Log in</button>
+                                    <button class="btn btn-lg btn-success btn-block login-button" type="submit">Create User!</button>
                                  </div>
                                 
                                     </form> 

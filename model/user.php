@@ -75,10 +75,19 @@
           return $this->_username;
       }
       
-      function getBio()
+      function getBio($username)
       {
-          return $this->_bio;
+         $select = 'SELECT bio FROM `Blogger` WHERE userName = :username';
+           $statement = $this->_pdo->prepare($select);
+           $statement->bindValue(':username', $username, PDO::PARAM_STR);
+           $statement->execute();
+           
+           
+           while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                return $row[bio];
+           }
       }
+      
       
       function getPortrait()
       {

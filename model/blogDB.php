@@ -52,5 +52,8 @@
         
           return $this->_username;
       }
-       
+      
+      function addBlogPost($title, $entry, $username){
+        
+      }
     }

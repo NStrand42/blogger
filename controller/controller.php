@@ -16,6 +16,11 @@
             }
         }
         
+        function addPost($title, $entry, $username){
+            $sess = new Blog();
+            $sess->addBlogPost($title, $entry, $username);
+        }
+        
         function renderHome($f3)
         {
             $this->checkLoggedIn($f3);
@@ -109,47 +114,37 @@ This is a long Entry. This is a long Entry.This is a long Entry.This is a long E
         {
           $this->checkLoggedIn($f3);
           
-          
+          $sess = new Blog;
           
           //Get an array that has all blogs associated to user title, entry, date
+          $results = $sess->getUsersProfileInfo($params['user']);
           
-          $testArray1 = array('title' => 'This is the Top Blogs Title',
-                              'entry' => 'Entry',
-                              'wordCount' => '1',
-                              'date' => "05/22/2017");
           
-          $testArray1[entry] = "" . "This is a long Entry. This is a long Entry.This is a long Entry. This is a long Entry. This is a long Entry.This is a long Entry.
+          $topBlog = current($results);
+          next($results);
+          
+          foreach ($results as $x => $x_value) {
+              
+            $title = $x_value['title'];
+            $entry = $x_value['entry'];
+            $wordCount = count_chars($x['entry']);
+            $date = $x_value['date'];
 
-This is a long Entry. This is a long Entry.This is a long Entry.This is a long Entry. This is a long Entry.This is a long Entry.
-
-This is a long Entry. This is a long Entry.This is a long Entry.This is a long Entry. This is a long Entry.This is a long Entry.
-
-This is a long Entry. This is a long Entry.This is a long Entry.This is a long Entry. This is a long Entry.This is a long Entry.
-";
+            
+              $resultsArray[] = array('title' => $title,
+                              'entry' => $entry,
+                              'wordCount' => $wordCount,
+                              'date' => $date); 
+            }
+           
           
- 
-          $testArray2 = array('title' => 'Title2',
-                              'entry' => $testArray1[entry],
-                              'wordCount' => '2',
-                              'date' => "05/22/2017");
-          
-          $testArray3 = array('title' => 'Title3',
-                              'entry' => $testArray1[entry],
-                              'wordCount' => '3',
-                              'date' => "05/22/2017");
-          
-          $firstBlog[] = $testArray1;
-          
-          $testArray = array($testArray1, $testArray2, $testArray3);
-          
-          $f3->set('topBlog', $firstBlog);
+          $f3->set('topBlog', $topBlog);
           $f3->set('user', $params['user']);
-          $f3->set('blogs',  $testArray);
+          $f3->set('blogs',  $resultsArray);
           
+          $user = new User();
+          $f3->set('bio', $user->getBio($params['user']));
           
-          $f3->set('bio', $testArray1[entry]);
-          
- 
           
           echo Template::instance()->render('view/pages/profile.html');
         }

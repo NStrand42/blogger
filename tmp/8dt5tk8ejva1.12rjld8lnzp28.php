@@ -54,14 +54,14 @@
                   <div class="col-sm-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            
+                            <form action="http://nstrand.greenrivertech.net/IT328/blogger/profile/<?= $usernameCheck ?>" method="post" class="form-horizontal">
                               <div class="row">
                                 
                                 
                                 
                                   <div class="col-sm-10">
                                     <div class="panel">
-                                    <input id="msg" type="text" class="form-control" name="msg" placeholder="Title of Blog">
+                                    <input input type="text"  class="form-control" name="title" placeholder="Title of Blog" required autofocus>
                                    </div>
                                   </div>
                                   
@@ -90,7 +90,7 @@
                               <div class="panel panel-default">
                                 
                                 <label for="inputPassword" class="sr-only">Password</label>
-                                <textarea placeholder="" rows="10" class="form-control"></textarea>
+                                <textarea  input type="text"  rows="10" class="form-control" name="entry" placeholder="Begin your Entry here" required "></textarea>
                               
                              </div>
                             </div>
