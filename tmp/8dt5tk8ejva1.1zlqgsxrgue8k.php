@@ -52,12 +52,13 @@
                         
                             <div class="panel-heading spaceBetween">
                               <img id="irc_mi" class="homeImage" src="http://pets.vethospitals.ufl.edu/files/2012/04/Ocala_main.jpg" alt="" width="100%">
+                              <h4><?= $user[username] ?></h4>
                             </div>
                             
                             <hr>
                             
                             <div class="LinkSpacingHome">
-                              <a href="./profile/<?= $user[name] ?>"> view blogs </a> <p>Total: <?= $user[blogTotal] ?></p>
+                              <a href="./profile/<?= $user[username] ?>"> view blogs </a> <p>Total: <?= $user[blogTotal] ?></p>
                             </div>
                             
                             <hr>

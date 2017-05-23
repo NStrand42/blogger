@@ -56,9 +56,32 @@
         return $results;
       }
       
-      function getTitle()
+      function blogsPerUser()
       {
-          return $_username;
+          $select = 'SELECT user, COUNT(*) AS `TotalBlogs` FROM `Blog`';
+        $statement = $this->_pdo->prepare($select);
+        $statement->bindValue(':username', $username, PDO::PARAM_STR);
+        $statement->execute();
+        
+        
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+             
+             $results[$row['id']] = $row;
+        }
+        
+        return $results;
+      }
+      
+      function blogCountForUser($arrayOfUsers, $usernameToSearch)
+      {
+        foreach ($arrayOfUsers as $y => $y_value) {
+            if($usernameToSearch == $y_value['user']){
+                $blogCount = $y_value['TotalBlogs'];
+                return $blogCount;
+            }
+        }
+        
+       
       }
       
       function getEntry()

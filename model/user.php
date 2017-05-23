@@ -70,9 +70,19 @@
             
       }
       
-      function getUsername()
+      function getAllUsers()
       {
-          return $this->_username;
+        $select = 'SELECT username ,portrait FROM `Blogger`';
+        $statement = $this->_pdo->prepare($select);
+        $statement->bindValue(':username', $username, PDO::PARAM_STR);
+        $statement->execute();
+        
+        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+             
+             $results[$row['id']] = $row;
+        }
+        
+        return $results;
       }
       
       function getBio($username)

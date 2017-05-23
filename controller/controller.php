@@ -24,47 +24,34 @@
         function renderHome($f3)
         {
             $this->checkLoggedIn($f3);
-            $testArray1 = array('name' => 'This is the Top Blogs Title',
-                              'topEntry' => 'Entry',
-                              'blogTotal' => '1');
             
-          $testArray1[entry] = "" . "This is a long Entry. This is a long Entry.This is a long Entry. This is a long Entry. This is a long Entry.This is a long Entry.
-
-This is a long Entry. This is a long Entry.This is a long Entry.This is a long Entry. This is a long Entry.This is a long Entry.
-
-This is a long Entry. This is a long Entry.This is a long Entry.This is a long Entry. This is a long Entry.This is a long Entry.
-
-This is a long Entry. This is a long Entry.This is a long Entry.This is a long Entry. This is a long Entry.This is a long Entry.
-";
+            $users = new User;
+            $allUsers = $users->getAllUsers();
+            
+            $blogs = new Blog;
+            $blogsGroupedByUsers = $blogs->blogsPerUser();
+            
+             foreach ($allUsers as $x => $x_value) {
+             
+             //need to get the users top blogs entry
+             $results = $blogs->getUsersProfileInfo($x_value['username']);
+             $topBlog = current($results);
+              
+              
+            $blogCount = $blogs->blogCountForUser($blogsGroupedByUsers, $x_value['username']);
+            $username = $x_value['username'];
+            $entry = $topBlog['entry'];
+            $portrait = $x_value['portrait'];
+                 
+            $resultsArray[] = array('username' => $username,
+                              'portrait' => $portrait,
+                              'blogTotal' => $blogCount,
+                              'topEntry' => $entry); 
+            }
+            
+            
           
- 
-          $testArray2 = array('name' => 'Some guy',
-                              'topEntry' => $testArray1[entry],
-                              'blogTotal' => '2');
-          
-          $testArray3 = array('name' => 'Thomas Hank',
-                              'topEntry' => $testArray1[entry],
-                              'blogTotal' => '3');
-          
-          $testArray4 = array('name' => 'Some guy',
-                              'topEntry' => $testArray1[entry],
-                              'blogTotal' => '2');
-          
-          $testArray5 = array('name' => 'Thomas Hank',
-                              'topEntry' => $testArray1[entry],
-                              'blogTotal' => '3');
-          
-          $testArray6 = array('name' => 'Some guy',
-                              'topEntry' => $testArray1[entry],
-                              'blogTotal' => '2');
-          
-          $testArray7 = array('name' => 'Thomas Hank',
-                              'topEntry' => $testArray1[entry],
-                              'blogTotal' => '3');
-          
-          $testArray = array($testArray1, $testArray2, $testArray3, $testArray4, $testArray5,$testArray6,$testArray7);
-          
-          $f3->set('users',  $testArray);
+          $f3->set('users',  $resultsArray);
           
           echo Template::instance()->render('view/pages/home.html');
         }
@@ -224,7 +211,7 @@ This is a long Entry. This is a long Entry.This is a long Entry.This is a long E
                 exit();
             }
             
-            echo Template::instance()->render('http://nstrand.greenrivertech.net/IT328/blogger/login');
+            echo Template::instance()->render('view/pages/login.html');
         }
         
     }  
