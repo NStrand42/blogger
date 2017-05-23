@@ -36,7 +36,8 @@
     });
     
     $f3->route('GET|POST /login', function($f3) {
-        
+      
+      
       $control = new Controller();
       $control->renderLogin($f3);
        
@@ -68,6 +69,15 @@
       $captureUserandTitle[] = array($params['user'] => $params['title']);
       $control = new Controller();
       $control->renderBlog($f3, $captureUserandTitle);
+        
+    });
+    
+    $f3->route('GET|POST /profile/createUser', function($f3) {
+        
+      $captureNewUser = $_POST;
+      echo var_dump($_POST);
+      $control = new Controller();
+      $control->createUser($f3, $captureNewUser);
         
     });
     

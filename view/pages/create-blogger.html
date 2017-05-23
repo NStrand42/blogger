@@ -59,24 +59,25 @@
                               <div class="row">
                                 <div class="col-sm-6 blogger-entry login-entry">
                                     
-                                    <form class="form-signin">
+                                    <form action="./profile/createUser" method="post" class="form-horizontal">
                                         
                                         
                                         
                                         <div class="form-group">
                                           <label for="inputUsername" class="sr-only">Username</label>
-                                          <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+                                          class="form-control" type="text" name="pet-type" id="pet-type"
+                                          <input type="text"  class="form-control" name="username" placeholder="Username" required autofocus>
                                           <label for="inputPassword" class="sr-only">Email</label>
-                                          <input type="password" id="inputPassword" class="form-control" placeholder="Email" required>
+                                          <input type="email" class="form-control" name="email" placeholder="Email" required>
                                         </div>
                                     
                                       <div class="form-group blogger-info">
-                                        <label for="inputUsername" class="sr-only">Upload Portait Here</label>
-                                        <input type="email" id="inputEmail" class="form-control" placeholder="Password" required autofocus>
+                                        <label for="inputUsername" class="sr-only">Password</label>
+                                        <input type="password" class="form-control" name="password" placeholder="Password" required autofocus>
                                         
                                        
-                                        <label for="inputPassword" class="sr-only">Password</label>
-                                        <input type="password" id="inputPassword" class="form-control" placeholder="Verify" required>
+                                        <label for="inputPassword" class="sr-only">Verify Password</label>
+                                        <input type="password" id="inputPassword" name="verifyPassword" class="form-control" placeholder="Verify Password" required>
                                       </div>
                                       
           
@@ -90,13 +91,13 @@
                                   
                                     <div class="form-group">
                                         <label for="inputUsername" class="sr-only">Username</label>
-                                        <input type="email" id="inputEmail" class="form-control" placeholder="Upload Portait Here" required autofocus>
+                                        <input type="text" class="form-control" name="image" placeholder="Upload Portait Here" required autofocus>
                                     </div>
                                          <span class="input-group-addon">Quick Biogrpahy</span>
                                      
                                      <div class="form-group">   
                                         <label for="inputPassword" class="sr-only">Password</label>
-                                        <textarea placeholder="" rows="6" class="form-control"></textarea>
+                                        <textarea placeholder="" name="bio" rows="6" class="form-control"></textarea>
                                      </div>
                                     
                                     

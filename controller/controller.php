@@ -63,6 +63,14 @@ This is a long Entry. This is a long Entry.This is a long Entry.This is a long E
         
         function renderLogin($f3)
         {
+          //if they just came from creating a user that information needs to be stored.
+          if (!isset($_SESSION['admin']) || $_SESSION['admin'] != TRUE) {
+            $_SESSION['returnURL'] = $_SERVER['REQUEST_URI'];
+            header("Location: admin_logon.php");
+            exit();
+          }
+          
+          //Otherwise prompt with login and then needs to match
           
           echo Template::instance()->render('view/pages/login.html');
         }
@@ -87,6 +95,9 @@ This is a long Entry. This is a long Entry.This is a long Entry.This is a long E
         
         function renderProfile($f3, $params)
         {
+          
+          
+          
           
           //Get an array that has all blogs associated to user title, entry, date
           
@@ -173,6 +184,28 @@ This is a long Entry. This is a long Entry.This is a long Entry.This is a long E
             }
             
             echo Template::instance()->render('view/pages/blog.html');
+        }
+        
+        function createUser($f3, $info)
+        {
+            
+            //Get the form data
+            $username = $info['username'];
+            $email = $info['email'];
+            $password = $info['password'];
+            $verifyPassword = $info['verifyPassword'];
+            $image = $info['image'];
+            $bio = $info['bio'];
+            
+            //if passwords don't match make them enter it again
+            if($password != $verifyPassword){
+                echo Template::instance()->render('view/pages/create-blogger.html'');
+            }
+            
+            $user = new User();
+            $user->addUser($username, $email, $bio, $image, $password);
+            
+            echo Template::instance()->render('view/pages/create-blogger.html');
         }
         
     }  
