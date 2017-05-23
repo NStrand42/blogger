@@ -37,9 +37,11 @@
     
     $f3->route('GET|POST /login', function($f3) {
       
+      $username = $_POST['username'];
+      $pass = $_POST['password'];
       
       $control = new Controller();
-      $control->renderLogin($f3);
+      $control->renderLogin($f3, $username, $pass);
        
     });
     

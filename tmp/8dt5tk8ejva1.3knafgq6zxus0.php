@@ -16,7 +16,7 @@
         <img id="trumpet"src="http://nstrand.greenrivertech.net/IT328/blogger/images/trumpet.png" alt="../images/trumpet.png" style="width:10vw;">
         <li><a href="http://nstrand.greenrivertech.net/IT328/blogger">Home ></a></li>
     
-        <?php if ($user): ?>
+        <?php if ($usernameCheck): ?>
             <!-- logged in now show these --> 
           
             <li><a href="http://nstrand.greenrivertech.net/IT328/blogger/your-blog">MyBlogs ></a></li>

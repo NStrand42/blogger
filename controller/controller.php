@@ -1,15 +1,24 @@
 <?php
     class Controller
     {
+        private $sess;
         
         function __construct()
         {
-          
+           $sess = new blogDB;
         }
         
+        function checkLoggedIn($f3) {
+            
+            if(isset($_SESSION['username']))
+            {
+                $f3->set('usernameCheck', $_SESSION['username']);
+            }
+        }
         
         function renderHome($f3)
         {
+            $this->checkLoggedIn($f3);
             $testArray1 = array('name' => 'This is the Top Blogs Title',
                               'topEntry' => 'Entry',
                               'blogTotal' => '1');
@@ -57,13 +66,21 @@ This is a long Entry. This is a long Entry.This is a long Entry.This is a long E
         
         function renderAboutUs($f3)
         {
-          
+          $this->checkLoggedIn($f3);
           echo Template::instance()->render('view/pages/about-us.html');
         }
         
-        function renderLogin($f3)
+        function renderLogin($f3, $username, $pass)
         {
+          $this->checkLoggedIn($f3);
+          $credentials = new blogDB;
+          $loginCheck = $credentials->determineLoggedIn($username);
           
+          
+          if(sha1($pass) == $loginCheck) {
+            $_SESSION['username'] = $username;
+            $f3->reroute('/');
+          }
           
           //Otherwise prompt with login and then needs to match
           
@@ -72,25 +89,25 @@ This is a long Entry. This is a long Entry.This is a long Entry.This is a long E
         
         function renderCreateBlog($f3)
         {
-          
+          $this->checkLoggedIn($f3);
           echo Template::instance()->render('view/pages/create-blog.html');
         }
         
         function renderBecomeABlogger($f3)
         {
-          
+          $this->checkLoggedIn($f3);
           echo Template::instance()->render('view/pages/create-blogger.html');
         }
         
         function renderYourBlogs($f3)
         {
-          
+          $this->checkLoggedIn($f3);
           echo Template::instance()->render('view/pages/your-blogs.html');
         }
         
         function renderProfile($f3, $params)
         {
-          
+          $this->checkLoggedIn($f3);
           
           
           
@@ -139,7 +156,7 @@ This is a long Entry. This is a long Entry.This is a long Entry.This is a long E
         
         function renderBlog($f3, $params)
         {
-            
+            $this->checkLoggedIn($f3);
             //Get the array from the database that has has Blogs and entries associated to user title, entry
             foreach ($params as $x => $x_value) {
               
@@ -183,7 +200,7 @@ This is a long Entry. This is a long Entry.This is a long Entry.This is a long E
         
         function createUser($f3, $info)
         {
-            
+            $this->checkLoggedIn($f3);
             //Get the form data
             $username = $info['username'];
             $email = $info['email'];

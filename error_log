@@ -1217,3 +1217,24 @@
 [23-May-2017 02:30:27 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1791] call_user_func_array()
 [23-May-2017 02:30:27 America/Chicago] [IT328/blogger/vendor/bcosca/fatfree-core/base.php:1612] Base->call()
 [23-May-2017 02:30:27 America/Chicago] [IT328/blogger/index.php:84] Base->run()
+[23-May-2017 03:02:23 America/Chicago] PHP Parse error:  syntax error, unexpected ';' in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 70
+[23-May-2017 03:02:23 America/Chicago] Fatal error: syntax error, unexpected ';'
+[23-May-2017 03:02:23 America/Chicago] [IT328/blogger/controller/controller.php:70] 
+[23-May-2017 03:02:35 America/Chicago] PHP Fatal error:  Class 'blogDB' not found in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 66
+[23-May-2017 03:02:35 America/Chicago] Fatal error: Class 'blogDB' not found
+[23-May-2017 03:02:35 America/Chicago] [IT328/blogger/controller/controller.php:66] 
+[23-May-2017 03:21:23 America/Chicago] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION), expecting ',' or ';' in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 6
+[23-May-2017 03:21:23 America/Chicago] Fatal error: syntax error, unexpected 'function' (T_FUNCTION), expecting ',' or ';'
+[23-May-2017 03:21:23 America/Chicago] [IT328/blogger/controller/controller.php:6] 
+[23-May-2017 03:21:37 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 12
+[23-May-2017 03:21:37 America/Chicago] Fatal error: syntax error, unexpected '{'
+[23-May-2017 03:21:37 America/Chicago] [IT328/blogger/controller/controller.php:12] 
+[23-May-2017 03:22:02 America/Chicago] PHP Fatal error:  Call to a member function checkLoggedIn() on a non-object in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 21
+[23-May-2017 03:22:02 America/Chicago] Fatal error: Call to a member function checkLoggedIn() on a non-object
+[23-May-2017 03:22:02 America/Chicago] [IT328/blogger/controller/controller.php:21] 
+[23-May-2017 03:22:31 America/Chicago] PHP Fatal error:  Call to undefined function checkLoggedIn() in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 21
+[23-May-2017 03:22:31 America/Chicago] Fatal error: Call to undefined function checkLoggedIn()
+[23-May-2017 03:22:31 America/Chicago] [IT328/blogger/controller/controller.php:21] 
+[23-May-2017 03:22:46 America/Chicago] PHP Fatal error:  Call to a member function set() on a non-object in /home/nstrand/public_html/IT328/blogger/controller/controller.php on line 15
+[23-May-2017 03:22:46 America/Chicago] Fatal error: Call to a member function set() on a non-object
+[23-May-2017 03:22:46 America/Chicago] [IT328/blogger/controller/controller.php:15] 
