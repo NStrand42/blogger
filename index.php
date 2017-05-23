@@ -75,7 +75,6 @@
     $f3->route('GET|POST /profile/createUser', function($f3) {
         
       $captureNewUser = $_POST;
-      echo var_dump($_POST);
       $control = new Controller();
       $control->createUser($f3, $captureNewUser);
         

@@ -63,12 +63,7 @@ This is a long Entry. This is a long Entry.This is a long Entry.This is a long E
         
         function renderLogin($f3)
         {
-          //if they just came from creating a user that information needs to be stored.
-          if (!isset($_SESSION['admin']) || $_SESSION['admin'] != TRUE) {
-            $_SESSION['returnURL'] = $_SERVER['REQUEST_URI'];
-            header("Location: admin_logon.php");
-            exit();
-          }
+          
           
           //Otherwise prompt with login and then needs to match
           
@@ -197,15 +192,27 @@ This is a long Entry. This is a long Entry.This is a long Entry.This is a long E
             $image = $info['image'];
             $bio = $info['bio'];
             
+            $f3->set('username', $username);
+            $f3->set('email', $email);
+            $f3->set('portrait', $image);
+            $f3->set('bio', $bio);
+            
             //if passwords don't match make them enter it again
             if($password != $verifyPassword){
-                echo Template::instance()->render('view/pages/create-blogger.html'');
+                echo Template::instance()->render('view/pages/create-blogger.html');
+                exit();
             }
             
             $user = new User();
-            $user->addUser($username, $email, $bio, $image, $password);
+            $added = $user->addUser($username, $email, $bio, $image, $password);
             
-            echo Template::instance()->render('view/pages/create-blogger.html');
+            if($added == false){
+                $f3->set('userAlreadyExsists', "I'm sorry that user already exsists try a different username");
+                echo Template::instance()->render('http://nstrand.greenrivertech.net/IT328/blogger/become-a-blogger');
+                exit();
+            }
+            
+            echo Template::instance()->render('http://nstrand.greenrivertech.net/IT328/blogger/login');
         }
         
     }  

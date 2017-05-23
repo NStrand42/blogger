@@ -35,6 +35,25 @@
                        $portrait="http://pets.vethospitals.ufl.edu/files/2012/04/Ocala_main.jpg", $password="unknown")
       {
         
+        $select = 'SELECT id, name, type, color FROM pets WHERE id=:id';
+             
+
+        
+        
+        
+           $select = 'SELECT userName FROM `Blogger` WHERE userName = :username';
+           $statement = $this->_pdo->prepare($select);
+           $statement->bindValue(':username', $username, PDO::PARAM_STR);
+           $statement->execute();
+           
+           
+           while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                if($row['userName'] == $username){
+                return false;
+                }
+           }
+        
+        
         $hash = sha1($password);
           $insert = 'INSERT INTO Blogger (userName, email, portrait, bio, password) VALUES (:username, :email, :portrait, :bio, :password)';
              
@@ -46,6 +65,8 @@
             $statement->bindValue(':password', $hash, PDO::PARAM_STR);
             
             $statement->execute();
+            
+            return true;
             
       }
       

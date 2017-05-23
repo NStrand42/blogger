@@ -59,21 +59,21 @@
                               <div class="row">
                                 <div class="col-sm-6 blogger-entry login-entry">
                                     
-                                    <form action="./profile/createUser" method="post" class="form-horizontal">
+                                    <form action="http://nstrand.greenrivertech.net/IT328/blogger/profile/createUser" method="post" class="form-horizontal">
                                         
                                         
                                         
                                         <div class="form-group">
                                           <label for="inputUsername" class="sr-only">Username</label>
-                                          class="form-control" type="text" name="pet-type" id="pet-type"
-                                          <input type="text"  class="form-control" name="username" placeholder="Username" required autofocus>
+                                          <p>{{ @userAlreadyExsists }}</p>
+                                          <input type="text"  class="form-control" name="username" placeholder="Username" value="{{ @username }}" required autofocus>
                                           <label for="inputPassword" class="sr-only">Email</label>
-                                          <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                          <input type="email" class="form-control" name="email" placeholder="Email" value="{{ @email }}" required>
                                         </div>
                                     
                                       <div class="form-group blogger-info">
-                                        <label for="inputUsername" class="sr-only">Password</label>
-                                        <input type="password" class="form-control" name="password" placeholder="Password" required autofocus>
+                                        <label for="inputPassword" class="sr-only">Password</label>
+                                        <input type="password" class="form-control" name="password" placeholder="Password"  required autofocus>
                                         
                                        
                                         <label for="inputPassword" class="sr-only">Verify Password</label>
@@ -90,14 +90,14 @@
                                   
                                   
                                     <div class="form-group">
-                                        <label for="inputUsername" class="sr-only">Username</label>
-                                        <input type="text" class="form-control" name="image" placeholder="Upload Portait Here" required autofocus>
+                                        <label for="inputUsername" class="sr-only">Portrait</label>
+                                        <input type="text" class="form-control" name="image" placeholder="Upload Portait Here"value="{{ @portrait }}" required autofocus>
                                     </div>
                                          <span class="input-group-addon">Quick Biogrpahy</span>
                                      
                                      <div class="form-group">   
                                         <label for="inputPassword" class="sr-only">Password</label>
-                                        <textarea placeholder="" name="bio" rows="6" class="form-control"></textarea>
+                                        <textarea placeholder="" name="bio" rows="6" value="{{ @bio }}" class="form-control"></textarea>
                                      </div>
                                     
                                     
