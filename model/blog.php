@@ -40,6 +40,12 @@
         $statement->execute();
       }
       
+      function welcomeNewBlogger($username){
+        $welcomeTitle = "Welcome to the Blog Site!";
+        $welcomeEntry = "To get started be sure to create your own blog post on the left nav bar!";
+        $this->addBlogPost($welcomeTitle, $welcomeEntry, $username);
+      }
+      
       function getUsersProfileInfo($username)
       { 
         $select = 'SELECT id ,title, entry, date FROM `Blog` WHERE user = :username ORDER BY id DESC';
@@ -58,7 +64,7 @@
       
       function blogsPerUser()
       {
-          $select = 'SELECT user, COUNT(*) AS `TotalBlogs` FROM `Blog`';
+          $select = 'SELECT id, user, COUNT(*) AS `TotalBlogs` FROM `Blog` GROUP BY user';
         $statement = $this->_pdo->prepare($select);
         $statement->bindValue(':username', $username, PDO::PARAM_STR);
         $statement->execute();
@@ -67,6 +73,7 @@
         while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
              
              $results[$row['id']] = $row;
+             
         }
         
         return $results;
@@ -74,14 +81,14 @@
       
       function blogCountForUser($arrayOfUsers, $usernameToSearch)
       {
-        foreach ($arrayOfUsers as $y => $y_value) {
-            if($usernameToSearch == $y_value['user']){
+        foreach ($this->blogsPerUser() as $y => $y_value) {
+            if($usernameToSearch === $y_value['user']){
                 $blogCount = $y_value['TotalBlogs'];
-                return $blogCount;
+                
             }
         }
         
-       
+        return $blogCount;
       }
       
       function getEntry()

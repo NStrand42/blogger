@@ -87,7 +87,7 @@
                     <div class="col-sm-12">
                       <div class="panel panel-default">
                           <div class="panel-content">
-                            <img id="irc_mi" class="" src="http://pets.vethospitals.ufl.edu/files/2012/04/Ocala_main.jpg" alt="" width="100%">
+                            <img id="irc_mi" class="" src="<?= $portrait ?>" alt="" width="100%">
                           </div>
                       </div>
                     </div>

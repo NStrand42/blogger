@@ -39,6 +39,7 @@
               
               
             $blogCount = $blogs->blogCountForUser($blogsGroupedByUsers, $x_value['username']);
+
             $username = $x_value['username'];
             $entry = $topBlog['entry'];
             $portrait = $x_value['portrait'];
@@ -116,7 +117,6 @@
             $entry = $x_value['entry'];
             $wordCount = count_chars($x['entry']);
             $date = $x_value['date'];
-
             
               $resultsArray[] = array('title' => $title,
                               'entry' => $entry,
@@ -131,6 +131,7 @@
           
           $user = new User();
           $f3->set('bio', $user->getBio($params['user']));
+          $f3->set('portrait', $user->getPortrait($params['user']));
           
           
           echo Template::instance()->render('view/pages/profile.html');
@@ -203,7 +204,10 @@
             }
             
             $user = new User();
+            $blog = new Blog();
+            $blog->welcomeNewBlogger($username);
             $added = $user->addUser($username, $email, $bio, $image, $password);
+            
             
             if($added == false){
                 $f3->set('userAlreadyExsists', "I'm sorry that user already exsists try a different username");

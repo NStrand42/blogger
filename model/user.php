@@ -72,7 +72,7 @@
       
       function getAllUsers()
       {
-        $select = 'SELECT username ,portrait FROM `Blogger`';
+        $select = 'SELECT id, username ,portrait FROM `Blogger`';
         $statement = $this->_pdo->prepare($select);
         $statement->bindValue(':username', $username, PDO::PARAM_STR);
         $statement->execute();
@@ -99,9 +99,17 @@
       }
       
       
-      function getPortrait()
+      function getPortrait($username)
       {
-          return $this->_portrait;
+          $select = 'SELECT portrait FROM `Blogger` WHERE userName = :username';
+           $statement = $this->_pdo->prepare($select);
+           $statement->bindValue(':username', $username, PDO::PARAM_STR);
+           $statement->execute();
+           
+           
+           while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                return $row[portrait];
+           }
       }
       
       function getAllBlogs()

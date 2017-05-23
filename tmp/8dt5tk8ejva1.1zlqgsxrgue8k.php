@@ -51,7 +51,7 @@
                           <div class="panel-heading">
                         
                             <div class="panel-heading spaceBetween">
-                              <img id="irc_mi" class="homeImage" src="http://pets.vethospitals.ufl.edu/files/2012/04/Ocala_main.jpg" alt="" width="100%">
+                              <img id="irc_mi" class="homeImage" src="<?= @$user[portrait] ?>" alt="" width="100%">
                               <h4><?= $user[username] ?></h4>
                             </div>
                             
