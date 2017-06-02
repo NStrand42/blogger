@@ -34,8 +34,6 @@
       function addUser($username="unknown", $email="unknown", $bio="Not Entered",
                        $portrait="http://pets.vethospitals.ufl.edu/files/2012/04/Ocala_main.jpg", $password="unknown")
       {
-        
-        $select = 'SELECT id, name, type, color FROM pets WHERE id=:id';
              
 
         
