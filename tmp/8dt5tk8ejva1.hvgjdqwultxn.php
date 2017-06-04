@@ -64,18 +64,40 @@
                                         
                                         
                                         <div class="form-group">
+                                            <?php if ($usernameError  != null): ?>
+                                                <div class="alert alert-danger">
+                                                    <strong>Error: <?= $usernameError ?></strong><span id="username-error"></span>
+                                                </div>
+                                            <?php endif; ?>
                                           <label for="inputUsername" class="sr-only">Username</label>
-                                          <p><?= $userAlreadyExsists ?></p>
                                           <input type="text"  class="form-control" name="username" placeholder="Username" value="<?= $username ?>" required autofocus>
-                                          <label for="inputPassword" class="sr-only">Email</label>
+                                          <?php if ($emailError  != null): ?>
+                                                <div class="alert alert-danger">
+                                                    <strong>Error: <?= $emailError ?></strong><span id="email-error"></span>
+                                                </div>
+                                          <?php endif; ?>
+                                          <label for="inputEmail" class="sr-only">Email</label>
                                           <input type="email" class="form-control" name="email" placeholder="Email" value="<?= $email ?>" required>
                                         </div>
                                     
                                       <div class="form-group blogger-info">
+                                        <?php if ($passwordCharacterError  != null): ?>
+                                            <div class="alert alert-danger">
+                                                <strong>Error:
+                                                    <?php foreach (($passwordCharacterError?:[]) as $val): ?>
+                                                        <strong><?= $val ?></strong> <br />
+                                                    <?php endforeach; ?>
+                                                </strong><span id="email-error"></span>
+                                            </div>
+                                        <?php endif; ?>
                                         <label for="inputPassword" class="sr-only">Password</label>
                                         <input type="password" class="form-control" name="password" placeholder="Password"  required autofocus>
                                         
-                                       
+                                        <?php if ($passwordError  != null): ?>
+                                            <div class="alert alert-danger">
+                                                <strong>Error: <?= $passwordError ?></strong><span id="email-error"></span>
+                                            </div>
+                                        <?php endif; ?>
                                         <label for="inputPassword" class="sr-only">Verify Password</label>
                                         <input type="password" id="inputPassword" name="verifyPassword" class="form-control" placeholder="Verify Password" required>
                                       </div>
@@ -90,14 +112,19 @@
                                   
                                   
                                     <div class="form-group">
-                                        <label for="inputUsername" class="sr-only">Portrait</label>
+                                        <label for="portrait" class="sr-only">Portrait</label>
                                         <input type="text" class="form-control" name="image" placeholder="Upload Portait Here"value="<?= $portrait ?>" required autofocus>
                                     </div>
                                          <span class="input-group-addon">Quick Biogrpahy</span>
                                      
+                                     <?php if ($bioHTMLInjection  != null): ?>
+                                            <div class="alert alert-danger">
+                                                <strong>Error: <?= $bioHTMLInjection ?></strong><span id="email-error"></span>
+                                            </div>
+                                        <?php endif; ?>
                                      <div class="form-group">   
-                                        <label for="inputPassword" class="sr-only">Password</label>
-                                        <textarea placeholder="" name="bio" rows="6" value="<?= $bio ?>" class="form-control"></textarea>
+                                        <label for="bio" class="sr-only">Bio</label>
+                                        <textarea placeholder="" name="bio" rows="6" class="form-control"><?= $bio ?></textarea>
                                      </div>
                                     
                                     

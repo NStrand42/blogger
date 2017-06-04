@@ -165,35 +165,97 @@
         {
             $this->checkLoggedIn($f3);
             //Get the form data
+            
             $username = $info['username'];
             $email = $info['email'];
             $password = $info['password'];
-            $verifyPassword = $info['verifyPassword'];
-            $image = $info['image'];
             $bio = $info['bio'];
+            $image = $info['image'];
+            
+            //ensure the email is valid
+            
+            if (!(filter_var($info['email'], FILTER_VALIDATE_EMAIL))) {
+                $errors['emailError'] = "Email address not valid. Please try again";
+            }
+            
+            //check that the passwords match
+            
+            $verifyPassword = $info['verifyPassword'];
+            
+            if ( $info['password'] != $info['verifyPassword']) {
+                $errors['passworderror'] = "These passwords do not match please try again";
+            }
+            
+            //check the password contains what it should special chr, number, at least 6 characters and a letter
+        
+            if (strlen($info['password']) < 6) {
+                $errors['passwordCharacterError'] = array("charLength" => "Password too short!") ;
+            }
+            
+            
+             // /[\'\/~`\!@#\$%\^&\*\(\)_\-\+=\{\}\[\]\|;:"\<\>,\.\?\\\]/
+            if ((!preg_match('/[\'\/~`\!@#\$%\^&\*\(\)_\-\+=\{\}\[\]\|;:"\<\>,\.\?\\\]/', $info['password']))) {
+                $errors['passwordCharacterError'] += array("charSpecialCharacter" => "Password must include at least one special character");
+            }
+        
+            if (!preg_match("#[0-9]+#", $info['password'])) {
+                $errors['passwordCharacterError'] += array("charNumber" => "Password must include at least one number");
+            }
+        
+            if (!preg_match("#[a-zA-Z]+#", $info['password'])) {
+                $errors['passwordCharacterError'] += array("charLength" => "Password must include at least one letter") ;
+            }     
+          
+            //strip any html from bio
+            
+            if($bio != strip_tags($info['bio'])){
+                $errors['bioHTMLInjection'] = "Use of HTML tags not available in Bio";
+            }
+            
+            //if no errors then attempt to add the user. If returns false username taken and render create blogger again
             
             $f3->set('username', $username);
             $f3->set('email', $email);
             $f3->set('portrait', $image);
             $f3->set('bio', $bio);
             
-            //if passwords don't match make them enter it again
-            if($password != $verifyPassword){
-                echo Template::instance()->render('view/pages/create-blogger.html');
-                exit();
-            }
-            
             $user = new User();
-            $blog = new Blog();
-            $blog->welcomeNewBlogger($username);
             $added = $user->addUser($username, $email, $bio, $image, $password);
             
             
             if($added == false){
-                $f3->set('userAlreadyExsists', "I'm sorry that user already exsists try a different username");
-                echo Template::instance()->render('http://nstrand.greenrivertech.net/IT328/blogger/become-a-blogger');
+                 $errors['usernameError'] = "I'm sorry that username already exsists. Please try a different username";
+            }
+            
+            // check to see if $errors was created if so render create blogger again and send output to user
+            
+            if (isset($errors)){
+                if (isset($errors['usernameError'])){
+                    $f3->set('usernameError', $errors['usernameError']);
+                }
+                
+                if (isset($errors['passworderror'])){
+                     $f3->set('passwordError', $errors['passworderror']);
+                }
+                
+                if (isset($errors['passwordCharacterError'])){
+                    $f3->set('passwordCharacterError', $errors['passwordCharacterError']);
+                }
+                
+                if (isset($errors['bioHTMLInjection'])){
+                    $f3->set('bioHTMLInjection', $errors['bioHTMLInjection']);
+                }
+                
+                if (isset($errors['emailError'])){
+                    $f3->set('emailError', $errors['emailError']);
+                }
+                
+                echo Template::instance()->render('view/pages/create-blogger.html');
                 exit();
             }
+            
+            $blog = new Blog();
+            $blog->welcomeNewBlogger($username);
             
             echo Template::instance()->render('view/pages/login.html');
         }
